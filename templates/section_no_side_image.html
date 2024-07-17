@@ -1,0 +1,80 @@
+{% from 'button.html' import button %}
+{% from 'each_event.html' import each_event %}
+{% from 'each_faq.html' import each_faq %}
+{% from 'each_team_member.html' import each_team_member %}
+{% from 'all_events.html' import all_events %}
+
+{% macro section_no_side_image(data, more_data) %}
+
+<div class="each_section" style="width: 100%">  
+
+    {% if data.bg_exists == "true"%}
+        <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{'static/images/'+data.body_bg_image}}); 
+                    color: #ececec" class="fit_background_image">
+
+            <div class="center_everything center_everything_margins">
+                <div class="item">
+                    <h1 class="heading_text event_heading"> {{ data.heading_text }} </h1>
+                </div> 
+            </div>
+            
+        </div>
+    {%else%}
+        <p class="break" style="font-size: 7px;">break</p>
+    {% endif %}
+
+    <div class="center_everything_margins">
+
+        {% if data.side_button_exists == "true" and data.bg_exists != "true"%}
+
+            <div style="display: flex; padding: 40px 0px;">
+
+                <div class="events_title">
+                    <h1 class="heading_text event_heading"> {{ data.heading_text }} </h1>
+                </div>
+            
+                <div class="button_right"> {{button(data.button_content, data.button_link, data.button_type)}}</div>
+            
+            </div>
+        
+        {%elif data.bg_exists != "true"%}
+
+            <div class="text_div">
+                <div class="item">
+                    <h1 class="heading_text"> {{ data.heading_text }} </h1> <br>
+                </div>
+            </div>
+
+        {% endif %}
+
+        {%if data.bg_exists == "true" %} 
+
+            <p class="break">break</p>
+
+        {%endif%}
+
+        {% if data.events_exist == "true"%}
+            {{ all_events(data, more_data) }}
+        
+        {% elif data.faqs_exists == "true"%}
+            {% for i in range (more_data|length)%}
+                {{ each_faq(more_data[i], "answer" + i|string) }}
+            {% endfor %}
+
+        {% elif data.team_exists == "true"%}
+        
+            {% for i in range (more_data|length)%}
+                {{ each_team_member(more_data[i]) }}
+            {% endfor %}
+        
+        {%else%}
+
+            <p class="break">break</p>
+            <p class="break" style="font-size: 7px;">break</p>
+
+        {% endif %}
+
+    </div>
+</div>
+
+{% endmacro %}

@@ -1,0 +1,10 @@
+- section1:
+  section_no_side_image: 'true'
+  team_exists: "true"
+
+  bg_exists: 'true'
+  body_bg_image: 'dataSciImage.jpg'
+
+  heading_text: Our Team
+
+  profile_image: left

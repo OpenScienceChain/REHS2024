@@ -1,0 +1,27 @@
+- event:
+  event_name: "SUPERCOMPUTING 19"
+  event_date: "19th Jun. 2020"
+  event_description: "An update of the Open Science Chain project was presented at SC19: 31st International Conference for High Performance Computing, Networking, Storage, and Analysis."
+
+  bg_img: 'event3.jpg'
+
+- event:
+  event_name: "SUPERCOMPUTING 19"
+  event_date: "19th Jun. 2020"
+  event_description: "An update of the Open Science Chain project was presented at SC19: 31st International Conference for High Performance Computing, Networking, Storage, and Analysis."
+
+  bg_img: 'event3.jpg'
+
+- event:
+  event_name: "NEUROSCIENCE 2019"
+  event_date: "21st Oct. 2019"
+  event_description: "Open Science Chain will be presented at the Society for Neuroscience's 49th annual meeting, a premier venue for neuroscientists to present emerging science, learn from experts, forge collaborations with peers, explore new tools and technologies, and advance careers."
+
+  bg_img: 'event2.jpg'
+
+- event:
+  event_name: "GATEWAYS 2019"
+  event_date: "25th Sep. 2019"
+  event_description: "Demo of the Open Science Chain portal that utilizes distributed ledger technology (consortium blockchain) to securely store information about scientific data including its provenance at the Gateways 2019 conference."
+
+  bg_img: 'event1.jpg'

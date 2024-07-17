@@ -1,0 +1,15 @@
+{% macro each_team_member(more_data) %}
+
+    <div class="center_everything">
+        <img src="{{ url_for( 'static', filename = 'images/' + more_data.profile_pic ) }}" style="width: 200px;"/>
+        
+        <p class="break">break</p>
+
+        <div class="text_div" style="width: 80%; padding: 40px">
+            <p class="heading_text" style=" color: #367c8a; font-weight: 700"> {{more_data.name}}</p>
+            <p class="body_text" style="font-weight: 700"> {{more_data.role}}</p>
+            <!-- <p class="break" style="font-size: 7px">break</p> -->
+            <p class="body_text"> <span style="font-weight: 700">Biography:</span> {{more_data.biography}}</p>
+        </div>
+    </div>
+{% endmacro %}

@@ -1,0 +1,31 @@
+{% macro each_faq(faq_data, index) %}
+
+        
+<div class="center_everything faq_question faq_body" onclick="{{index}}()">
+        <p class="body_text">{{ faq_data.question }}</p>
+
+        <img src="static/images/down_arrow.png" style="height: 20px"/>
+</div>
+
+<div class="center_everything faq_body faq_answer" id="{{index}}">
+    <p class="body_text">{{ faq_data.answer }}</p>
+</div>
+
+<p class="break">break</p>
+
+<script>
+
+function {{index}}() {
+    var i = "{{index}}";
+    var answer = document.getElementById(i);
+
+    if (answer.style.maxHeight){
+        answer.style.maxHeight = null;
+    } else {
+        answer.style.maxHeight = (answer.scrollHeight + 80) + "px";
+    } 
+}
+
+</script>
+
+{% endmacro %}

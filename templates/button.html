@@ -1,0 +1,23 @@
+{% macro button(content, link, type) %}
+
+{% set class = ""%}
+
+{% if type == "small"%}
+    {% set class = "arrow_button_small"%}
+{% else %}
+    {% set class = "arrow_button"%}
+{% endif %}
+
+<button onclick="document.location='{{link}}'" class="{{class}}" >
+    <span>{{ content }}</span> 
+    
+    &nbsp;&nbsp;
+    
+    {% if type == "small"%}
+        <img src="{{ url_for('static', filename='images/arrow.png') }}" class="arrow_image_small"/>
+    {% else %}
+        <img src="{{ url_for('static', filename='images/arrow.png') }}" class="arrow_image"/>
+    {% endif %}
+</button>
+
+{% endmacro %}

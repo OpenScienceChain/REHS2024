@@ -1,0 +1,51 @@
+{% from 'button.html' import button %}
+
+{% macro section_image(data) %}
+
+{% set text_class = ""%}
+
+<div class="each_section" style="background-color: {{data.body_bg_color}}">  
+
+    <div class="center_everything center_everything_margins">
+        
+        {% if data.image_direction == "left" %}
+            <div class="image_div image_left">
+                <img class="{{data.image_class}}" src="{{ url_for('static', filename='images/' + data.image_src) }}">
+            </div>
+
+            {% set text_class = "text_formatting_right"%}
+        {% else %}
+            {% set text_class = "text_formatting_left"%}
+        {% endif %}
+
+        <div class=" {{ 'text_div ' + text_class}}">
+
+            <p class="break">break</p>
+
+            <div class="item">
+                <h1 class="heading_text"> {{ data.heading_text }} </h1> <br>
+            </div>
+
+            <p class="body_text"> {{ data.body_text }} </p>
+            
+            {% if data.button_exists == "true" %}
+                <p class="break" style="font-size: 7px">break</p>
+                {{ button(data.button_content, data.button_link, data.button_type) }}
+                
+            {% endif %}
+
+            <p class="break">break</p>
+
+        </div>
+
+        {% if data.image_direction == "right" %}
+            <div class="image_div image_right">
+                <img class="{{data.image_class}}" src="{{ url_for('static', filename='images/' + data.image_src) }}">
+            </div>
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endmacro %}

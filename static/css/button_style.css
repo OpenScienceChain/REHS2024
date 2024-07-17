@@ -1,0 +1,84 @@
+.arrow_button {
+    background-color: #367c8a;
+    padding: 20px;
+    border: none;
+    border-radius: 17px;
+    width: 300px;
+    font-size: 20px;
+    font-family: 'Lexend';
+    color: white;
+}
+
+.arrow_button:hover {
+    background-color: #22525b;
+}
+
+.arrow_button:hover {
+    cursor: pointer;
+}
+
+.arrow_button_small {
+    background-color: #367c8a;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 17px;
+    width: fit-content;
+    font-size: 20px;
+    font-family: 'Lexend';
+    color: white;
+    margin-left: 1em;
+}
+
+.arrow_button_small:hover {
+    background-color: #22525b;
+}
+
+.arrow_button_small:hover {
+    cursor: pointer;
+}
+
+.arrow_image {
+    width: 70px; 
+    vertical-align: middle;
+}
+
+.arrow_image_small {
+    width: 45px; 
+    vertical-align: middle;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .arrow_image_small {
+        width: 40px; 
+    }
+
+    .arrow_image {
+        width: 60px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .arrow_button {
+        width: 250px;
+        font-size: 18px;
+    }
+
+    .arrow_image {
+        width: 55px; 
+    }
+}
+
+@media (max-width: 700px) {
+    .arrow_button {
+        width: 250px;
+        font-size: 17px;
+    }
+
+    .arrow_button_small {
+        font-size: 15px;
+    }
+
+    .arrow_image {
+        width: 55px; 
+    }
+}

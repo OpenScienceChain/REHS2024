@@ -1,0 +1,10 @@
+- section1:
+  section_no_side_image: 'true'
+
+  bg_exists: 'true'
+  body_bg_image: 'dataSciImage.jpg'
+
+  heading_text: Frequently Asked Questions
+
+  faqs_exists: "true"
+

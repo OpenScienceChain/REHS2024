@@ -1,0 +1,63 @@
+- section1:
+  section_image_bg: 'true'
+  heading_text: ABOUT US
+  body_text: Fostering trust in the research community by protecting the 
+            integrity and provenance of scientific data in secure manner and promoting 
+            knowledge exchange for best practices in sharing scientific data.
+  
+  body_bg_image: "dataSciImage.jpg"
+  text_color: '#e3e3e3'
+
+- section2:
+  heading_text: WHAT WE DO
+  body_text: OSC, built using distributed ledger technologies (a consortium blockchain), 
+            allows researchers to provide metadata and verification information about 
+            their scientific datasets and update this information as the datasets change 
+            and evolve over time in an auditable manner. In simple words, this gives 
+            researchers the ability to extend and build upon prior research when they are 
+            able to efficiently access, validate, and verify the data referenced.
+
+  body_bg_image: none
+  body_bg_color: '#fafafa'
+
+  main_image_class: images_small
+  main_image_direction: right
+  main_image_src: blockchain1.png
+
+- section3:
+  
+  heading_text: OUR PORTAL
+  body_text: OSC features a web-based portal with user-friendly interfaces for data registration,
+            search and verification capability along with client tools to access the platform. 
+            Additionally researchers can develop “research workflows” linking data entries in the
+            ledger creating an auditable record of the data workflow process behind the research 
+            findings.
+
+  body_bg_image: none
+  body_bg_color: '#e6e6e6'
+
+  button_exists: "true" 
+  button_content: "Visit our Portal"
+  button_link: "/about"
+  button_type: normal
+
+  main_image_class: images_big
+  main_image_direction: left
+  main_image_src: portal.jpg
+
+- section4:
+  event_num_limit: 3
+
+  events_exist: 'true'
+
+  bg_exists: 'false'
+
+  side_button_exists: 'true'
+  button_content: "View More"
+  button_link: "/events"
+  button_type: "small" 
+
+  section_no_side_image: 'true'
+
+  heading_text: OUR EVENTS
+        

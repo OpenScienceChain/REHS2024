@@ -1,0 +1,40 @@
+- for sections:
+
+    - everything about images
+        to add a background image: 
+          section_image_bg: make sure that the value is "true"
+          body_bg_image: image name
+
+        to add a side image: 
+          image_class: name of class
+          image_direction: left or right
+          image_src: image name
+
+        for no images: 
+          image_class: name of class
+          image_direction: left or right
+          image_src: image name
+
+    - everything about backgrounds
+        to change the background colors: 
+          body_bg_image: none #not necessery
+          body_bg_color: '#fafafa'
+
+    - everything about buttons
+        side_button_exists: 'true' #to get a button beside the heading
+
+        button_exists: make sure that the value is "true"
+        button_type: arrow_button is the only type available
+        button_content: any text
+        button_link: the link of the button
+
+    - everything about events
+        to add events into a different page:
+          event_num_limit: any valid number
+          event_limit: "all" #to get all the events, leave it empty to get a certain limit
+
+        to make an events page:
+          event_limit: "all" #necessery
+
+#595959
+#367c8a

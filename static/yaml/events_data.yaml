@@ -1,0 +1,11 @@
+- section1:
+  event_limit: 'all'
+
+  events_exist: 'true'
+
+  section_no_side_image: 'true'
+
+  bg_exists: 'true'
+  body_bg_image: 'dataSciImage.jpg'
+
+  heading_text: OUR EVENTS
