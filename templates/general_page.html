@@ -1,0 +1,54 @@
+{% from 'navigation.html' import navigation %}
+{% from 'section_image.html' import section_image %}
+{% from 'section_image_bg.html' import section_image_bg %}
+{% from 'section_no_side_image.html' import section_no_side_image %}
+{% from 'footer.html' import footer %}
+{% from 'button.html' import button %}
+{% from 'all_events.html' import events %}
+
+<html lang="en">
+<head>
+
+    <title>{{title}}</title>
+
+    {%for css_file in css_file_names%}
+
+        <link rel="stylesheet" type="text/css" href= "{{ url_for( 'static', filename = css_file ) }}">
+
+    {% endfor %}
+
+    <link rel="icon" href="data:,">
+
+</head>
+
+<body>
+    <!-- Start of header -->
+
+    {{ navigation() }}
+
+    {% for each_section in data%}
+
+        {% if each_section.section_image_bg == "true"%}
+            {{ section_image_bg(each_section) }}
+
+
+        {% elif each_section.section_no_side_image == "true"%}
+
+            {%if each_section.events_exist == "true" or each_section.faqs_exists == "true" 
+            or each_section.team_exists == "true"%}
+
+                {{ section_no_side_image(each_section, more_data)}}
+
+            {%endif%}
+        
+        {% else %}
+
+            {{ section_image(each_section) }}
+
+        {% endif %}
+        
+    {% endfor %}
+
+    {{ footer() }}
+</body>
+</html>

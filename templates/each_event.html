@@ -1,0 +1,16 @@
+{% from 'button.html' import button %}
+
+{% macro each_event(event_data) %}
+
+<div class="each_event fit_background_image" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url({{'static/images/events/' + event_data['bg_img']}});">
+    <p class="body_text event_text">{{event_data['event_name']}}</p> 
+    <p class="body_text event_text">Date: {{event_data['event_date']}}</p> 
+    <p class="body_text event_text">Description: {{event_data['event_description']}}</p> 
+    
+    <p class="break"> </p>
+    <p class="break" style="font-size: 7px"> </p>
+
+    {{ button('Learn More', "/", "small")}}
+</div>
+
+{% endmacro %}

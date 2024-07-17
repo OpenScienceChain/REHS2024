@@ -1,0 +1,37 @@
+{% from 'button.html' import button %}
+{% from 'each_event.html' import each_event %}
+
+{% macro all_events(data, more_data) %}
+
+<div class="center_everything"></div>
+                
+    <div class="events" style="margin: 0em; display: flex;
+flex-wrap: wrap;">
+
+    {% set length = 0%}
+
+    {% if data.event_limit == 'all'%}
+        {% set length = more_data|length%}
+    {% elif (data.event_num_limit > 0 and data|length > data.event_num_limit) %}
+        {% set length = data.event_num_limit%}
+    {% endif %}
+
+    {% for i in range(0, length)%}
+        {% set width = 100 %}
+
+        {% if i + 3 > more_data|length %}
+            {% set width = ((more_data|length - i )/ 3) * 100 - 0.666%}
+        {%endif%}
+        
+        {% if (more_data|length > i) %}
+            {{ each_event(more_data[i])}}
+        {% endif %}
+        
+    {% endfor %}
+    </div>
+</div>
+
+<p class="break">break</p>
+<p class="break" style="font-size: 7px;">break</p>
+
+{% endmacro %}

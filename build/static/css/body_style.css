@@ -1,0 +1,293 @@
+@font-face {
+    font-family: Lexend;
+    src: url(/static/fonts/Lexend.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #595959;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Lexend', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.break {
+    font-size: 20px;
+    visibility: hidden;
+}
+
+/* each section for each piece of text + image */
+.each_section {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/* centers everything in a section */
+.center_everything {
+    height: 100%;
+    align-items: center; 
+    display: flex;
+}
+
+.center_everything_margins {
+    margin-right: 7em;
+    margin-left: 7em;
+}
+
+.each_section .text_formatting_left {
+    margin-right: 7em;
+}
+
+.each_section .text_formatting_right {
+    margin-left: 7em;
+}
+
+/* when text and an image is side by side, use this for formatting*/
+.each_section .text_div {
+    width: 50%;
+    padding: 20px 0px;
+    display: grid;
+    align-items: center;
+
+}
+
+/* for the text bodies */
+.each_section .body_text {
+    font-size: 20px;
+    padding: 0px;
+}
+
+/* for the headings */
+.each_section .heading_text {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.each_section .events_title {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-content: left;
+}
+
+.each_section .button_right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.each_section .events {
+    padding: 0px 0px;
+    
+    align-items: center;
+
+    font-family: 'Lexend';
+}
+
+.each_section .each_event {
+    display: grid;
+    flex: 1;
+
+    border: none;
+    border-radius: 25px;
+
+    padding: 5px;
+    padding-bottom: 30px;
+
+    color: #ececec;
+
+    width: 33%;
+}
+
+.each_section .event_heading {
+    width: fit-content;
+    margin-right: 0em;
+    padding: 20px 0px;
+}
+
+.each_section .each_event:first-child {
+    align-items: center;
+}
+
+.each_section .each_event:not(:first-child) {
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 4em;
+}
+
+.each_section .event_text {
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.each_section .event_text:not(:last-child) {
+    margin-bottom: 0em;
+}
+
+.each_section .event_text:last-child {
+    margin-bottom: 1em;
+}
+
+.each_section .event_text:first-child {
+    font-weight: 700;
+}
+
+.each_section .faq_body {
+    width: 96%; 
+    border: 2px solid #367c8a; 
+    padding: 00px 20px; 
+    justify-content: space-between;
+}
+
+.each_section .faq_question {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.each_section .faq_answer { 
+    font-weight: 400;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .each_section .each_event:not(:first-child) {
+        margin-left: 2em;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .each_section .heading_text {
+        font-size: 2.8rem;
+    }
+
+    .each_section .body_text {
+        font-size: 18px;
+    }
+
+    .each_section .each_event:last-child {
+        display: none;
+    }
+
+    .each_section .each_event:not(:first-child) {
+        margin-left: 2em;
+    }
+
+    .each_section .event_main_heading {
+        margin-right: 2em;
+        margin-left: 2em;
+
+        padding: 40px 0px;
+    }
+
+    .center_everything_margins {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .each_section .text_formatting_left {
+        margin-right: 2em;
+    }
+    
+    .each_section .text_formatting_right {
+        margin-left: 2em;
+    }
+
+    .each_section .event_heading {
+        padding: 15px 0px;
+    }
+}
+
+
+@media (max-width: 699px) {
+    .each_section .heading_text {
+        font-size: 2.3rem;
+    }
+
+    .each_section .body_text {
+        font-size: 17px;
+    }
+
+    .center_everything {
+        display: block;
+    }
+
+    .center_everything_margins {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .each_section .each_event:first-child {
+        justify-content: center;
+        align-items: center;
+    
+        margin-left: 0em;
+        width: 100%;
+    }
+
+    .each_section .each_event:not(:first-child) {
+        justify-content: center;
+        align-items: center;
+    
+        margin-left: 0em;
+        margin-top: 2em;
+        width: 100%;
+
+    }
+
+    .each_section .text_div {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .each_section .text_formatting_left {
+        margin-right: 0em;
+    }
+    
+    .each_section .text_formatting_right {
+        margin-left: 0em;
+    }
+
+    .break {
+        font-size: 10px;
+    }
+
+    .break:last-child {
+        display:none;
+    }
+
+    .each_section {
+        padding-bottom: 30px;
+    }
+
+    .each_section .event_heading {
+        padding: 0px 0px;
+    }
+}

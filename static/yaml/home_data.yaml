@@ -1,0 +1,55 @@
+- section1:
+
+  heading_text: PROTECTING INTEGRITY AND PROVENANCE OF RESEARCH DATA
+  body_text: OSC utilizes distributed ledger technology (a consortium blockchain) to
+    securely store information about scientific data including its provenance to
+    enable independent verification of its authenticity to establish trust in the
+    research community.
+  
+  body_bg_image: none
+  body_bg_color: '#e6e6e6'
+
+  image_class: images_small
+  image_direction: right
+  image_src: blockChain1.png
+
+- section2:
+  
+  heading_text: IMMUTABILITY AND TRANSPARENCY
+  body_text: Stores unique identifiers of the data and ownership 
+            information on the blockchain for immutable proof of existence. 
+            Tracks, stores and displays all changes made to data for 
+            transparency and traceability.
+
+  body_bg_image: none
+  body_bg_color: '#fafafa'
+
+  button_exists: "true" 
+  button_type: arrow_button
+  button_content: "Learn More"
+  button_link: "/about"
+
+  image_class: images_big
+  image_direction: left
+  image_src: dataSciImage1.jpg
+
+- section3:
+  
+  heading_text: USER-FRIENDLY PORTAL TO EXPLORE AND SHARE AUTHENTIC SCIENTIFIC DATA
+  body_text: Search, view, and validate authentic scientific
+            datasets stored in the Open Science Chain blockchain. 
+            Share scientific data, and document the data workflow 
+            process behind the collection.
+
+  body_bg_image: none
+  body_bg_color: '#e6e6e6'
+
+  button_exists: "true" 
+  button_type: arrow_button
+  button_content: "Visit our Portal"
+  button_link: "/about"
+
+  image_class: images_big
+  image_direction: right
+  image_src: portal.jpg
+        

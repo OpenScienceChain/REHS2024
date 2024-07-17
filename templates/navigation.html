@@ -1,0 +1,80 @@
+{% macro navigation() %}
+
+<head>
+<style>
+    @font-face {
+        font-family: Lexend;
+        src: url(/static/fonts/Lexend.ttf);
+    }
+
+    body {
+        font-family: Lexend;
+    }
+</style>
+</head>
+
+<header class="header">
+    <nav class="navigation">
+    <a href="/" class="menu_logo"><img src="{{ url_for('static', filename='images/logo.png') }}" style="width:220px;" /></a>
+    <ul class="menu">
+        <div class="menu_text">
+            <a href="/" class="menu_link animate_button animate_button-3 hover-border-3">Home</a>
+        </div>
+
+        <div class="menu_text">
+
+            <div class="dropdown">
+
+            <a class="menu_link animate_button animate_button-3 hover-border-3" href="/about">About 
+            </a>
+
+            <div class="dropdown-content menu_link">
+                <a href="/about">About OSC</a>
+                <a href="/team">Team</a>
+                <a href="/">Student Projects</a>
+                <a href="/events">Events</a>
+            </div>
+
+            </div>
+         </div>
+
+        <div class="menu_text">
+
+            <div class="dropdown">
+
+            <a class="menu_link animate_button animate_button-3 hover-border-3">Resources 
+            </a>
+
+            <div class="dropdown-content menu_link">
+                <a href="/faqs">FAQs</a>
+                <a href="/">Citing OSC</a>
+                <a href="/">User Guide</a>
+            </div>
+
+            </div>
+         </div>
+
+        <div class="menu_text">
+            <a href="#" class="menu_link animate_button animate_button-3 hover-border-3">Portal</a>
+        </div>
+    </ul>
+    <div class="menu_button">
+        <span class="menuBar"></span>
+        <span class="menuBar"></span>
+        <span class="menuBar"></span>
+    </div>
+    </nav>
+</header>
+
+<script>
+    const mobile = document.querySelector(".menu_button");
+    const navMenu = document.querySelector(".menu");
+
+    mobile.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        mobile.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+</script>
+{% endmacro %}

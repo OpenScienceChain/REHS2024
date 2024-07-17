@@ -1,0 +1,46 @@
+{% from 'button.html' import button %}
+
+{% macro section_image_bg(data) %}
+
+<style>
+    .bg_img {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{'static/images/'+data.body_bg_image}}); 
+        color: {{data['text_color']}}
+    }
+
+    @media (max-width: 700px) {
+        .bg_img {
+            padding-bottom: 10px;
+        }
+    }
+</style>
+
+<div class="each_section bg_img fit_background_image" style="width: 100%;">  
+   
+    <div class="center_everything center_everything_margins">
+
+        <div class="text_div">
+
+            <div class="item">
+                <h1 class="heading_text"> {{ data.heading_text }} </h1> <br>
+            </div>
+
+        </div>
+
+        <div class="text_div">
+
+            <p class="body_text"> {{ data.body_text }} </p>
+            
+            {% if data.button_exists == "true" %}
+                <p class="break" style="font-size: 7px">break</p>
+                {{ button(data.button_content, data.button_link, "small") }}
+                
+            {% endif %}
+
+        </div>
+
+    </div>
+</div>
+
+
+{% endmacro %}
