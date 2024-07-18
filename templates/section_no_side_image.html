@@ -19,8 +19,6 @@
             </div>
             
         </div>
-    {%else%}
-        <p class="break" style="font-size: 7px;">break</p>
     {% endif %}
 
     <div class="center_everything_margins">
@@ -47,7 +45,7 @@
 
         {% endif %}
 
-        {%if data.bg_exists == "true" %} 
+        {%if data.bg_exists == "true" and data.team_exists != "true"%} 
 
             <p class="break">break</p>
 
@@ -63,10 +61,11 @@
 
         {% elif data.team_exists == "true"%}
         
+            <p class="break" style="font-size: 7px">break</p>
+
             {% for i in range (more_data|length)%}
                 {{ each_team_member(more_data[i]) }}
             {% endfor %}
-        
         {%else%}
 
             <p class="break">break</p>
