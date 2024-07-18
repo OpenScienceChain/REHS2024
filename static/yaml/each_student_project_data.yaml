@@ -1,0 +1,36 @@
+- student:
+  event_name: "Ashika Palacharla"
+  event_date: "2022"
+  event_description: "Redesign the OSC web-portal for ease of use and navigation. 
+  Provided an accurate representation of first-time user navigating the
+  web-portal to allow for identification of features to be improved."
+
+  event_organization: "Del Norte High School"
+  event_link: "https://github.com/OpenScienceChain/REHS2022"
+
+  bg_img: 'event1.jpg'
+
+- student:
+  event_name: "Jacob Cunningham"
+  event_date: "2020"
+  event_description: "Research the application of a consortium blockchain in the music industry, and 
+learn to structure and setup a Hyperledger Fabric network. Use a blcokchain chaincode to create an
+audio fingerprinting and matching algorithm."
+
+  event_organization: "San Marcos High School"
+  event_link: "https://github.com/OpenScienceChain/REHS2020"
+
+  bg_img: 'event3.jpg'
+
+- student:
+  event_name: "Harris Beg"
+  event_date: "2019"
+  event_description: "With the advent of many large central organizations
+holding great amounts of data that are commonly
+subject to hacking, the role of a decentralized yet
+interconnected system becomes more apparent"
+
+  event_organization: "Canyon Crest Academy"
+  event_link: "https://github.com/OpenScienceChain/REHS2019"
+
+  bg_img: 'event2.jpg'

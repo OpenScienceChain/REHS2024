@@ -31,15 +31,18 @@
         {% if each_section.section_image_bg == "true"%}
             {{ section_image_bg(each_section) }}
 
-
         {% elif each_section.section_no_side_image == "true"%}
-
-            {%if each_section.events_exist == "true" or each_section.faqs_exists == "true" 
-            or each_section.team_exists == "true"%}
+            
+            {% if more_data is defined%}
 
                 {{ section_no_side_image(each_section, more_data)}}
 
-            {%endif%}
+            {% else %}
+
+                {% set more_data = ""%}
+                {{ section_no_side_image(each_section, more_data)}}
+
+            {% endif %}
         
         {% else %}
 

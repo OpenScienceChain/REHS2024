@@ -8,7 +8,13 @@
     {% set class = "arrow_button"%}
 {% endif %}
 
-<button onclick="document.location='{{link}}'" class="{{class}}" >
+{% set click_link = "document.location"%}
+
+{% if 'https:/' in link%}
+    {% set click_link = "location.href"%}
+{% endif%}
+
+<button onclick="{{click_link}} = '{{link}}'" class="{{class}}" >
     <span>{{ content }}</span> 
     
     &nbsp;&nbsp;
