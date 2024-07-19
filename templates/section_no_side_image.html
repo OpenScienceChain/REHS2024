@@ -47,11 +47,15 @@
         {% endif %}
 
         {% if data.body_text is defined%}
-        
-            <p class="body_text"> {{ data.body_text }} </p>
-
             <p class="break">break</p>
-
+            <p class="body_text"> {{ data.body_text }} </p>
+            <p class="break">break</p>
+        
+        {% elif data.num_body is defined%}
+            <p class="break">break</p>
+            {% for i in range (data.num_body) %}
+                <p class="body_text">{{data["body_text"+(i+1)|string]}}</p> 
+            {% endfor %}
         {% endif %}
 
         {%if data.bg_exists == "true" and data.team_exists != "true"%} 

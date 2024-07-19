@@ -7,8 +7,15 @@
         <img src="static/images/down_arrow.png" style="height: 20px"/>
 </div>
 
-<div class="center_everything faq_body faq_answer" id="{{index}}">
-    <p class="body_text">{{ faq_data.answer }}</p>
+<div class="faq_body faq_answer" id="{{index}}">
+    
+    {% if faq_data.answer is defined%}
+        <p class="body_text"> {{ faq_data.answer }} </p>
+    {% elif faq_data.num_answers is defined%}
+        {% for i in range (faq_data.num_answers) %}
+            <p class="body_text">{{faq_data["answer"+(i+1)|string]}}</p> 
+        {% endfor %}
+    {% endif %}
 </div>
 
 <p style="visibility: hidden">hello</p>
