@@ -1,10 +1,30 @@
 {% macro each_faq(faq_data, index) %}
 
-        
+<style>
+    .arrow_image_animated {
+        animation: rotate 1s;
+        transform: rotate(0deg);
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes rotate {
+        100% {transform: rotate(0deg);}
+    }
+
+    .arrow_image_animated_up {
+        animation: rotate_up 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes rotate_up {
+        100% {transform: rotate(90deg);}
+    }
+</style>
+
 <div class="center_everything faq_question faq_body" onclick="{{index}}()">
         <p class="body_text">{{ faq_data.question }}</p>
 
-        <img src="static/images/down_arrow.png" style="height: 20px"/>
+        <img src="static/images/down_arrow.png" style="height: 20px; transform: rotate(90deg)" id="stuff"/>
 </div>
 
 <div class="faq_body faq_answer" id="{{index}}">
@@ -25,11 +45,16 @@ function {{index}}() {
     var i = "{{index}}";
     var answer = document.getElementById(i);
 
+    var x = document.getElementById("stuff");
+
     if (answer.style.maxHeight){
         answer.style.maxHeight = null;
+        x.className = 'arrow_image_animated_up';
     } else {
         answer.style.maxHeight = (answer.scrollHeight + 80) + "px";
+        x.className = 'arrow_image_animated';
     } 
+
 }
 
 </script>

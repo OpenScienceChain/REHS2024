@@ -9,13 +9,12 @@
 - faq:
   question: "What are research workflows in OSC?"
   num_answers: 2
+  answer1: "Registering data with OSC can provide immutable provenance tracking for individual 
+  digital object or collection, scientific experiments typically involve a combination of 
+  algorithms or computational code, raw data and derived products."
 
-  answer1: "Registering data with OSC can provide immutable provenance tracking for 
-  individual digital object or collection, scientific experiments typically involve
-   a combination of algorithms or computational code, raw data and derived products."
-  answer2: "Research workflows in OSC will provide researchers the ability to create 
-  a detailed workflow linking multiple digital objects registered in OSC as well as 
-  certain external sources (e.g. GitHub) along with additional documentation detailing
-  the experiment (e.g. dependencies, parameters). Research workflows are also saved 
-  to the OSC blockchain to enable independent reproducibility of the scientific 
-  experiment."
+  answer2: "Research workflows in OSC will provide researchers the ability to create a detailed 
+  workflow linking multiple digital objects registered in OSC as well as certain external sources 
+  (e.g. GitHub) along with additional documentation detailing the experiment (e.g. dependencies, 
+  parameters). Research workflows are also saved to the OSC blockchain to enable independent 
+  reproducibility of the scientific experiment."

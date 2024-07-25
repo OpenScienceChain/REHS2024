@@ -40,6 +40,7 @@ a {
     height: 100%;
     align-items: center; 
     display: flex;
+    padding: 0px;
 }
 
 .center_everything_margins {
@@ -92,13 +93,6 @@ a {
     align-items: center;
 }
 
-.each_section .events {
-    padding: 0px 0px;
-    
-    align-items: center;
-
-    font-family: 'Lexend';
-}
 
 .each_section .each_event {
     display: grid;
@@ -112,24 +106,34 @@ a {
 
     color: #ececec;
 
-    width: 33%;
+    flex: 0 0 31.4%;
+}
+
+.each_section .each_event:nth-child(3n-2) {
+    margin-left: 0em;
+}
+
+.each_section .each_event:nth-child(3n-1) {
+    margin-left: 2em;
+}
+
+.each_section .each_event:nth-child(3n) {
+    margin-left: 2em;
+}
+
+.each_section .each_event:nth-child(n+4) {
+    margin-top: 3em;
+}
+
+.each_section .each_event:not(:first-child) {
+    justify-content: center;
+    align-items: center;
 }
 
 .each_section .event_heading {
     width: fit-content;
     margin-right: 0em;
     padding: 20px 0px;
-}
-
-.each_section .each_event:first-child {
-    align-items: center;
-}
-
-.each_section .each_event:not(:first-child) {
-    justify-content: center;
-    align-items: center;
-
-    margin-left: 4em;
 }
 
 .each_section .event_text {
@@ -176,9 +180,15 @@ a {
     transition: max-height 0.2s ease-out;
 }
 
-@media (min-width: 1000px) and (max-width: 1200px) {
-    .each_section .each_event:not(:first-child) {
-        margin-left: 2em;
+.team_heading {
+    color: #367c8a; 
+    font-weight: 700; 
+    font-size: 23px
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .each_section .each_event {
+        flex: 0 0 30.4%;
     }
 }
 
@@ -189,14 +199,6 @@ a {
 
     .each_section .body_text {
         font-size: 18px;
-    }
-
-    .each_section .each_event:last-child {
-        display: none;
-    }
-
-    .each_section .each_event:not(:first-child) {
-        margin-left: 2em;
     }
 
     .each_section .event_main_heading {
@@ -221,6 +223,34 @@ a {
 
     .each_section .event_heading {
         padding: 15px 0px;
+    }
+
+    .each_section .each_event {
+        flex: 0 0 46.7%;
+    }
+
+    .each_section .each_event:nth-child(3n-2) {
+        margin-left: 0em;
+    }
+
+    .each_section .each_event:nth-child(3n-1) {
+        margin-left: 0em;
+    }
+
+    .each_section .each_event:nth-child(3n) {
+        margin-left: 0em;
+    }
+
+    .each_section .each_event:nth-child(n+4) {
+        margin-top: 0em;
+    }
+
+    .each_section .each_event:nth-child(n+3) {
+        margin-top: 3em;
+    }
+
+    .each_section .each_event:nth-child(2n+2) {
+        margin-left: 2em;
     }
 }
 
@@ -289,5 +319,45 @@ a {
 
     .each_section .event_heading {
         padding: 0px 0px;
+    }
+
+    .each_section .text_formatting_left {
+        margin-right: 2em;
+    }
+    
+    .each_section .text_formatting_right {
+        margin-left: 2em;
+    }
+
+    .each_section .event_heading {
+        padding: 15px 0px;
+    }
+
+    .each_section .each_event {
+        flex: 0 0 97%;
+    }
+
+    .each_section .each_event:nth-child(3n-2) {
+        margin-left: 0em;
+    }
+
+    .each_section .each_event:nth-child(3n-1) {
+        margin-left: 0em;
+    }
+
+    .each_section .each_event:nth-child(3n) {
+        margin-left: 0em;
+    }
+
+    .each_section .each_event:nth-child(n+4) {
+        margin-top: 0em;
+    }
+
+    .each_section .each_event:nth-child(n+3) {
+        margin-top: 2em;
+    }
+
+    .each_section .each_event:nth-child(2n+2) {
+        margin-left: 0em;
     }
 }

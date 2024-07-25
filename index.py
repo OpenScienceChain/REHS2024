@@ -45,23 +45,40 @@ def home():
     return render_template("general_page.html", title="Home | Open Science Chain", 
                            css_file_names=css_files_names, data=all_data)
 
-@app.route("/<temp_files_names>")
-def all_pages(temp_files_names):
+# go through all the YAML files and render the HTML file for them
+@app.route("/<string:file_names>/")
+def all_pages(file_names):
     more_data = {}
 
-    if ("each_" + temp_files_names in all_files_names):
-        more_data = all_files_data["each_" + temp_files_names]
-    if (temp_files_names == "about"):
+    if ("each_" + file_names in all_files_names):
+        more_data = all_files_data["each_" + file_names]
+    
+    if ("about" == file_names):
         more_data = all_files_data["each_events"]
 
-    return render_template("general_page.html", title=temp_files_names.title() + " | Open Science Chain", 
-                           css_file_names=css_files_names, data=all_files_data[temp_files_names], more_data=more_data)
+    return render_template("general_page.html", 
+                           title=file_names.title() + " | Open Science Chain", 
+                           css_file_names=css_files_names, 
+                           data=all_files_data[file_names], 
+                           more_data=more_data)
+
+
+@freezer.register_generator
+def all_pages():
+    print(temp_files_names[0])
+    for i in range(1, len(temp_files_names)):
+        print(temp_files_names[i])
+        # temp = temp_files_names[i]
+        yield {'file_names': temp_files_names[i]}
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # freezer.run(debug=True)
+    # app.run(debug=True)
 
     # if __name__ == "__main__":
-    # # if len(sys.argv) > 1 and sys.argv[1] == "build":
-    # #     freezer.freeze()
-    # # else:
+    # if len(sys.argv) > 1 and sys.argv[1] == "build":
+    #     freezer.freeze()
+    # else:
     #     app.run(port=5000)
+
+    freezer.run(debug=True)

@@ -10,6 +10,10 @@
 }
 
 .arrow_button:hover {
+    background-color: #22525b;
+}
+
+.arrow_button:hover {
     cursor: pointer;
 }
 
@@ -23,6 +27,10 @@
     font-family: 'Lexend';
     color: white;
     margin-left: 1em;
+}
+
+.arrow_button_small:hover {
+    background-color: #22525b;
 }
 
 .arrow_button_small:hover {

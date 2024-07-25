@@ -27,7 +27,7 @@
   button_exists: "true" 
   button_type: arrow_button
   button_content: "Learn More"
-  button_link: "/about"
+  button_link: "/about/"
 
   image_class: images_big
   image_direction: left
