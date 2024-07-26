@@ -67,8 +67,6 @@ def all_pages(file_names):
 def all_pages():
     print(temp_files_names[0])
     for i in range(1, len(temp_files_names)):
-        print(temp_files_names[i])
-        # temp = temp_files_names[i]
         yield {'file_names': temp_files_names[i]}
 
 if __name__ == "__main__":
