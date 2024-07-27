@@ -49,7 +49,7 @@ def home():
 @app.route("/<string:file_names>/")
 def all_pages(file_names):
     more_data = {}
-
+    
     if ("each_" + file_names in all_files_names):
         more_data = all_files_data["each_" + file_names]
     
@@ -60,23 +60,15 @@ def all_pages(file_names):
                            title=file_names.title() + " | Open Science Chain", 
                            css_file_names=css_files_names, 
                            data=all_files_data[file_names], 
-                           more_data=more_data)
+                           more_data=more_data) 
 
 
 @freezer.register_generator
 def all_pages():
-    print(temp_files_names[0])
-    for i in range(1, len(temp_files_names)):
+    for i in range(0, len(temp_files_names)):
         yield {'file_names': temp_files_names[i]}
 
 if __name__ == "__main__":
-    # freezer.run(debug=True)
     # app.run(debug=True)
-
-    # if __name__ == "__main__":
-    # if len(sys.argv) > 1 and sys.argv[1] == "build":
-    #     freezer.freeze()
-    # else:
-    #     app.run(port=5000)
 
     freezer.run(debug=True)
