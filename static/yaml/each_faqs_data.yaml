@@ -1,5 +1,5 @@
 - faq:
-  question: "What is the Open Science Chain?"
+  question: "What is the Open Science Chain (OSC)?"
   answer: "Open Science Chain is an NSF funded project that is building a 
   cyberinfrastructure solution using distributed ledger technologies 
   (consortium blockchain) to enable a broad set of researchers to efficiently
@@ -7,9 +7,14 @@
   including detailed provenance information in a secure manner."
 
 - faq:
-  question: "What is the Open Science Chain?"
-  answer: "Open Science Chain is an NSF funded project that is building a 
-  cyberinfrastructure solution using distributed ledger technologies 
-  (consortium blockchain) to enable a broad set of researchers to efficiently
-  verify and validate the authenticity of scientific datasets and share metadata
-  including detailed provenance information in a secure manner."
+  question: "What are research workflows in OSC?"
+  num_answers: 2
+  answer1: "Registering data with OSC can provide immutable provenance tracking for individual 
+  digital object or collection, scientific experiments typically involve a combination of 
+  algorithms or computational code, raw data and derived products."
+
+  answer2: "Research workflows in OSC will provide researchers the ability to create a detailed 
+  workflow linking multiple digital objects registered in OSC as well as certain external sources 
+  (e.g. GitHub) along with additional documentation detailing the experiment (e.g. dependencies, 
+  parameters). Research workflows are also saved to the OSC blockchain to enable independent 
+  reproducibility of the scientific experiment."

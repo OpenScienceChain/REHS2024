@@ -13,3 +13,21 @@
   body_bg_color: '#fffffff'
 
   profile_pic: profile.png
+
+- team_member:
+  is_team_member: 'true'
+
+  name: Name
+
+  role: 'Role'
+
+  body_bg_color: '#fffffff'
+
+- team_member:
+  is_team_member: 'true'
+
+  name: Name
+
+  role: Role
+
+  body_bg_color: '#fffffff'

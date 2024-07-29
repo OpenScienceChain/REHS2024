@@ -8,8 +8,9 @@
 
 <div class="each_section" style="width: 100%">  
 
+
     {% if data.bg_exists == "true"%}
-        <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{'static/images/'+data.body_bg_image}}); 
+        <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{'/static/images/'+data.body_bg_image}}); 
                     color: #ececec" class="fit_background_image">
 
             <div class="center_everything center_everything_margins">
@@ -45,6 +46,18 @@
 
         {% endif %}
 
+        {% if data.body_text is defined%}
+            <p class="break">break</p>
+            <p class="body_text"> {{ data.body_text }} </p>
+            <p class="break">break</p>
+        
+        {% elif data.num_body is defined%}
+            <p class="break">break</p>
+            {% for i in range (data.num_body) %}
+                <p class="body_text">{{data["body_text"+(i+1)|string]}}</p> 
+            {% endfor %}
+        {% endif %}
+
         {%if data.bg_exists == "true" and data.team_exists != "true"%} 
 
             <p class="break">break</p>
@@ -64,8 +77,16 @@
             <p class="break" style="font-size: 7px">break</p>
 
             {% for i in range (more_data|length)%}
+                {% if i > 0%}
+                    {% if more_data[i-1].biography is defined and more_data[i].biography is not defined%}
+                        <p class="break" style="font-size: 7px">break</p>
+                        <h1 class="heading_text"> PAST TEAM MEMBERS</h1>
+                    {% endif %}
+                {% endif %}
                 {{ each_team_member(more_data[i]) }}
             {% endfor %}
+
+            <p class="break">break</p>
         {%else%}
 
             <p class="break">break</p>

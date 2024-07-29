@@ -39,7 +39,7 @@
 
   button_exists: "true" 
   button_content: "Visit our Portal"
-  button_link: "/about"
+  button_link: "/about/"
   button_type: normal
 
   image_class: images_big
@@ -55,7 +55,7 @@
 
   side_button_exists: 'true'
   button_content: "View More"
-  button_link: "/events"
+  button_link: "/events/"
   button_type: "small" 
 
   section_no_side_image: 'true'

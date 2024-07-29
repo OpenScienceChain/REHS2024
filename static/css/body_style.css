@@ -180,6 +180,12 @@ a {
     transition: max-height 0.2s ease-out;
 }
 
+.team_heading {
+    color: #367c8a; 
+    font-weight: 700; 
+    font-size: 23px
+}
+
 @media (min-width: 1000px) and (max-width: 1300px) {
     .each_section .each_event {
         flex: 0 0 30.4%;

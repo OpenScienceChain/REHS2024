@@ -1,0 +1,19 @@
+- section1:
+  section_no_side_image: 'true'
+
+  bg_exists: 'true'
+  body_bg_image: 'dataSciImage.jpg'
+
+  heading_text: CITING OSC
+
+  num_body: 3
+
+  body_text1: 'If you have used Open Science Chain in your research, please cite us as follows:'
+
+  body_text2: 'Sivagnanam, S., Nandigam, V., & Lin, K. (2019, July). Introducing the Open Science Chain: 
+      Protecting Integrity and Provenance of Research Data. In Proceedings of the Practice and
+       Experience in Advanced Research Computing on Rise of the Machines (learning) (p. 18). ACM.'
+  
+  body_text3: 'If you have any questions about citing us, please email info@opensciencechain.org'
+  
+  text_color: '#e3e3e3'
